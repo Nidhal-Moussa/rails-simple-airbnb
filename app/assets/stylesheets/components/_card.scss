@@ -1,0 +1,9 @@
+.card{
+  background-color: rgba(215, 215, 215,0.3);
+}
+.card_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:50px;
+  width: 70%;
+}

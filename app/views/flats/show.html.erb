@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+     <h1> <%= @flat.name%>: </h1>
+     <p> some details <%= @flat.description %></p>
+     <p>it's availbe for <%= @flat.number_of_guests %> person </p>
+     <hr>
+     <p>price <%= @flat.price_per_night %></p>
+    </div>
+    <br>
+    <hr>
+    <%= link_to "edit this flat", edit_flat_path(@flat) %>
+    <%= link_to "delete this flat", flats_path, class:"card-link", method: :destroy %>
+
+  </div>
+</div>
