@@ -1,16 +1,24 @@
 <div class="container">
   <div class="row">
-    <div class="col-6">
-     <h1> <%= @flat.name%>: </h1>
-     <p> some details <%= @flat.description %></p>
-     <p>it's availbe for <%= @flat.number_of_guests %> person </p>
-     <hr>
-     <p>price <%= @flat.price_per_night %></p>
+      <div class="col-6 my-6">
+      <div class="card my-3 p-3">
+          <h1> <%= @flat.name%>: </h1>
+          <p> some details <%= @flat.address %></p>
+      </div>
+      <div class="card my-3 p-3">
+          <p> A bit more about this flat...</p>
+          <p> <%= @flat.description %></p>
+      </div>
+      <div class="card my-3 p-3">
+          <span><i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %></span>
+          <span><i class="fas fa-user"></i> <%= @flat.number_of_guests %></span>
+      </div>
     </div>
     <br>
     <hr>
+    <%= link_to "back", flats_path %>
     <%= link_to "edit this flat", edit_flat_path(@flat) %>
-    <%= link_to "delete this flat", flats_path, class:"card-link", method: :destroy %>
+    <%= link_to "delete this flat", flat_path(@flat), class:"card-link", method: :delete %>
 
   </div>
 </div>
