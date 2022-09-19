@@ -14,7 +14,7 @@ class FlatsController < ApplicationController
   def create
     @flat = Flat.create(flat_params)
     @flat.save
-    redirect_to flats_path
+    redirect_to root_path
   end
 
   def edit
@@ -27,7 +27,7 @@ class FlatsController < ApplicationController
 
   def destroy
     @flat.destroy
-    redirect_to flats_path
+    redirect_to root_path
   end
 
   private
