@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :flats, exept: [:index]
+  resources :flats, except: [:index]
   root to:"flats#index"
 end
